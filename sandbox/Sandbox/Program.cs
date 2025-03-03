@@ -11,16 +11,26 @@ class Circle
 
 public double getArea()
 {
-    double area = Math.py * radius * radius;
-    return area
+    double area = Math.PI * (radius * radius);
+    return area;
+}
+
+public void DisplayCircleArea()
+{
+    Console.WriteLine($"the area fo the circle is {getArea()}");
 }
 
 }
 
 class Program
 {
-    static void main(string[] args)
+    static void Main(string[] args)
     {
         Console.WriteLine("hello world 3/3/25");
+
+        Circle myCircle = new Circle(10);
+        myCircle.DisplayCircleArea();
+        Circle myCircle2 = new Circle(20);
+        myCircle2.DisplayCircleArea();
     }
 }
